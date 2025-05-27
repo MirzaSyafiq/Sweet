@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You, My Love</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#fbeff8"/>
+  <link rel="icon" href="icons/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #fbeff8, #f0f4ff);
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #e91e63;
+      margin-bottom: 0.2em;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.8em;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 2s ease;
+    }
+    .heart {
+      color: #e91e63;
+      animation: pulse 1.5s infinite;
+    }
+    .dual {
+      margin-top: 2em;
+      animation: fadeInUp 2s ease;
+    }
+    .dual h2 {
+      font-size: 1.5em;
+      margin-top: 1em;
+      color: #5c6bc0;
+    }
+    iframe {
+      margin-top: 2em;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 300px;
+    }
+    .footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #c2185b;
+    }
+  </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered: ', registration);
+          }).catch(registrationError => {
+            console.log('ServiceWorker registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Thank You, My Love <span class="heart">❤</span></h1>
+  <p>To My Dearest Wife,</p>
+  <p>Thank you for carrying the greatest gift of our lives — <strong>Nelia Helina</strong>.<br>
+     Your love, strength, and warmth amaze me every single day.<br>
+     Watching you become a mother is the most beautiful thing I've ever seen.<br>
+     I love you more than words can say.</p>
+  <p>Forever yours,<br><strong>Mirza</strong></p>
+
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/7maJOI3QMu0?autoplay=1&mute=1&loop=1&playlist=7maJOI3QMu0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <br>
+  <a class="btn" href="#" onclick="alert('I love you so much! 🥰')">Tap for a Surprise</a>
+
+  <div class="footer">
+    Made with ❤️ by Mirza | For My Wife & Baby Nelia Helina
+  </div>
+</body>
+</html>
